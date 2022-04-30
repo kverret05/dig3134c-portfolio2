@@ -12,7 +12,7 @@
         <h3>Add a Contact to List:</h3>
         <dl>
         <dt><label>Contact ID:</label></dt>
-                <dd><input type="number" id="contact_ID" name="contact_ID"></input></dd>
+                <dd><input type="number" id="contact_id" name="contact_id"></input></dd>
             <dt><label>Contact First Name:</label></dt>
                 <dd><input type="text" id="contact_fName" name="contact_fName"></input></dd>
             <dt><label>Contact Last Name:</label><dt> 
@@ -30,6 +30,7 @@
         connect();
         contactsTable();
         addContact();
+        updateContact();
         deleteContact();
         close();
         echo("<br><a href='delete.php'>Delete a Contact</a>");
