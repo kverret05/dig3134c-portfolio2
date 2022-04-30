@@ -73,7 +73,7 @@
             $tel = htmlspecialchars($_POST["tel"]);
             $affiliation = htmlspecialchars($_POST["affiliation"]);
             
-            $contact_id = intval($_POST["contact_ID"]);
+            $contact_id = intval($_POST["contact_id"]);
 
             
             if($connection != null) {
@@ -85,10 +85,10 @@
 
     function deleteContact() {
         global $connection;
-        if (isset($_POST["contact_ID"]) &&
+        if (isset($_POST["contact_id"]) &&
         isset($_POST["contact_fName"]) &&
         isset($_POST["contact_lName"])) {
-                $contact_id = intval($_POST["contact_ID"]);
+                $contact_id = intval($_POST["contact_id"]);
                 $contact_fName = htmlspecialchars($_POST["contact_fName"]);
                 $contact_lName = htmlspecialchars($_POST["contact_fName"]);
 
