@@ -90,6 +90,7 @@
             }
         }
     }
+    
     function deleteContact() {
 
         global $connection;
