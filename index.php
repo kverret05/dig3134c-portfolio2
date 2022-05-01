@@ -4,18 +4,18 @@
 
 <html>
     <head>
-        <title>Contacts List</title>
+        <title>Your Contacts List</title>
     </head>
     <body>
     <h2>Current Contacts List</h2>
     <form action="index.php" method="POST">
-        <h3>Add a Contact to List:</h3>
+        <h3>Want to Add a Contact?</h3>
         <dl>
         <dt><label>Contact ID:</label></dt>
                 <dd><input type="number" id="contact_id" name="contact_id"></input></dd>
-            <dt><label>Contact First Name:</label></dt>
+            <dt><label>First Name:</label></dt>
                 <dd><input type="text" id="contact_fName" name="contact_fName"></input></dd>
-            <dt><label>Contact Last Name:</label><dt> 
+            <dt><label>Last Name:</label><dt> 
                 <dd><input type="text" id="contact_lName" name="contact_lName"></input></dd>
             <dt><label>Phone Number:</label><dt>  
                 <dd><input type="text" id="tel" name="tel"></input></dd>
@@ -29,8 +29,8 @@
     <?php
         connect();
         contactsTable();
+        updateTable();
         addContact();
-        updateContact();
         deleteContact();
         close();
         echo("<br><a href='delete.php'>Delete a Contact</a>");

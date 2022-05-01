@@ -9,7 +9,7 @@
     <body>
     <h2>Want to Delete a Contact?</h2>
         <form action="delete.php" method="POST">
-        <h2>Delete a Contact from List:</h2>
+        <h3>Delete a Contact from List:</h3>
         <dl>
             <dt><label>Contact First Name:</label></dt>
                 <dd><input type="number" id="contact_fName" name="contact_fName"></input></dd>
@@ -21,8 +21,8 @@
     <?php
         connect();
         contactsTable();
+        updateTable();
         addContact();
-        updateContact();
         deleteContact();
         close();
         echo("<br><a href='index.php'>Go back to Main Menu</a>");
