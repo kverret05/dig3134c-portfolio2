@@ -7,9 +7,8 @@
         <title>Delete a Contact</title>
     </head>
     <body>
-    <h2>Want to Delete a Contact?</h2>
+    <h2>Want to Delete a Contact from your List?</h2>
         <form action="delete.php" method="POST">
-        <h3>Delete a Contact from List:</h3>
         <dl>
             <dt><label>Contact First Name:</label></dt>
                 <dd><input type="number" id="contact_fName" name="contact_fName"></input></dd>

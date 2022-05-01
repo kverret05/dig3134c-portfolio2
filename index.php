@@ -4,12 +4,11 @@
 
 <html>
     <head>
-        <title>Your Contacts List</title>
+        <title>Contact List</title>
     </head>
     <body>
-    <h2>Current Contacts List</h2>
+    <h2>Current Contacts in List</h2>
     <form action="index.php" method="POST">
-        <h3>Want to Add a Contact?</h3>
         <dl>
         <dt><label>Contact ID:</label></dt>
                 <dd><input type="number" id="contact_id" name="contact_id"></input></dd>
