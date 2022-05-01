@@ -2,7 +2,7 @@
     $server = "localhost";
     $username = "root";
     $password = "";
-    $database = "contactsList";
+    $database = "contacts";
     $connection = null;
 
     function connect() {
@@ -52,7 +52,7 @@
                 $tel = htmlspecialchars($_POST["tel"]);
                 $affiliation = htmlspecialchars($_POST["affiliation"]);
                 if($connection != null) {
-                    $results = mysqli_query($connection, "INSERT INTO contactsList.book (contact_id, contact_fName, contact_lName, tel, email, affiliation) VALUES('{$contact_id}','{$contact_fName}', '{$contact_lName}', '{$tel}', '{$email}', '{$affiliation}')");
+                    $results = mysqli_query($connection, "INSERT INTO list (contact_id, contact_fName, contact_lName, tel, email, affiliation) VALUES('{$contact_id}','{$contact_fName}', '{$contact_lName}', '{$tel}', '{$email}', '{$affiliation}')");
             }
         }
     }
@@ -78,7 +78,7 @@
             
             if($connection != null) {
                 // Using the $connection, insert data into the database.
-                $results = mysqli_query($connection, "INSERT INTO contactsList (contact_id, contact_fName, contact_lName, email, tel, affiliation) VALUES({$contact_id}, '{$contact_fName}', '{$contact_lName}', '{$email}', '{$tel}', '{$affiliation}',)");
+                $results = mysqli_query($connection, "INSERT INTO list (contact_id, contact_fName, contact_lName, email, tel, affiliation) VALUES({$contact_id}, '{$contact_fName}', '{$contact_lName}', '{$email}', '{$tel}', '{$affiliation}',)");
             }
         }
     }
@@ -93,7 +93,7 @@
                 $contact_lName = htmlspecialchars($_POST["contact_fName"]);
 
                 if($connection != null) {
-                    $delete = "DELETE FROM contactsList.book WHERE contact_id = '{$contact_id}'";
+                    $delete = "DELETE FROM list WHERE contact_id = '{$contact_id}'";
                     mysqli_query($connection, $delete);
                 }
             }

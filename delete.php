@@ -22,6 +22,7 @@
         connect();
         contactsTable();
         addContact();
+        updateContact();
         deleteContact();
         close();
         echo("<br><a href='index.php'>Go back to Main Menu</a>");
