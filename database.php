@@ -41,33 +41,6 @@
         }
     }
 
-    function updateTable() {
-    
-        global $connection;
-    
-        if(isset($_POST["contact_id"]) &&
-           isset($_POST["contact_fName"]) &&
-           isset($_POST["contact_lName"]) &&
-           isset($_POST["email"]) &&
-           isset($_POST["tel"]) &&
-           isset($_POST["affiliation"])) {
-
-            $contact_fName = htmlspecialchars($_POST["contact_fName"]);
-            $contact_lName = htmlspecialchars($_POST["contact_lName"]);
-            $email = htmlspecialchars($_POST["email"]);
-            $tel = htmlspecialchars($_POST["tel"]);
-            $affiliation = htmlspecialchars($_POST["affiliation"]);
-            
-            $contact_id = intval($_POST["contact_id"]);
-
-            
-            if($connection != null) {
-                $results = mysqli_query($connection, "INSERT INTO list (contact_id, contact_fName, contact_lName, email, tel, affiliation) VALUES({$contact_id}, '{$contact_fName}', '{$contact_lName}', '{$email}', '{$tel}', '{$affiliation}',)");
-            }
-        }
-    }
-
-
     function addContact() {
 
         global $connection;
@@ -90,7 +63,7 @@
             }
         }
     }
-    
+
     function deleteContact() {
 
         global $connection;

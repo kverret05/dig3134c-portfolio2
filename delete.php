@@ -21,7 +21,6 @@
     <?php
         connect();
         contactsTable();
-        updateTable();
         addContact();
         deleteContact();
         close();
